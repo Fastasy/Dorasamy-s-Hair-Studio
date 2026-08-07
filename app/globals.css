@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
+@theme {
+  --color-mint: #70c1ce;
+  --color-sun: #fdc800;
+  --color-meadow: #238823;
+  --color-lilac: #c19ad0;
+  --color-forest: #112316;
+
+  --font-brand: var(--font-montserrat), "Arial Black", sans-serif;
+  --font-hand: var(--font-caveat), "Comic Sans MS", cursive;
+  --font-body: var(--font-nunito), "Segoe UI", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #70c1ce;
+  --foreground: #112316;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), "Segoe UI", sans-serif;
+}
+
+/* ---- Cloudy sky-mint page background ---- */
+.cloud-bg {
+  background:
+    radial-gradient(120% 60% at 15% -5%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 50%),
+    radial-gradient(90% 50% at 88% 8%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 45%),
+    radial-gradient(70% 40% at 5% 45%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 40%),
+    radial-gradient(80% 45% at 95% 65%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 40%),
+    radial-gradient(100% 50% at 30% 105%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 50%),
+    linear-gradient(180deg, #8ad3e0 0%, #70c1ce 45%, #64b3c1 100%);
+}
+
+/* Soft blurred cloud puffs layered on the background */
+.cloud-puff {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* Hero band gradient inside the frame */
+.hero-band {
+  background: linear-gradient(180deg, #8ad3e0 0%, #70c1ce 55%, #7cc6d2 100%);
+}
+
+/* ---- Wide-tracked bold geometric header (white + soft drop shadow) ---- */
+.brand-head {
+  font-family: var(--font-brand);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-shadow:
+    0 2px 4px rgba(17, 35, 22, 0.35),
+    0 10px 24px rgba(17, 35, 22, 0.45);
+}
+
+/* ---- Hand-drawn display font with heavy dark outline ---- */
+.hand-pop {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-text-stroke: 2.5px var(--color-forest);
+  paint-order: stroke fill;
+  text-shadow: 0 3px 0 rgba(17, 35, 22, 0.4);
+}
+
+.hand-dark {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  color: var(--color-forest);
+}
+
+/* ---- Gentle float for florals ---- */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.floaty { animation: floaty 6s ease-in-out infinite; }
+.floaty-slow { animation: floaty 9s ease-in-out infinite; }
+
+/* ---- WhatsApp pulse ---- */
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.wa-pulse { animation: wa-pulse 2.4s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .floaty, .floaty-slow, .wa-pulse { animation: none; }
 }
