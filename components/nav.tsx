@@ -17,7 +17,7 @@ export function SiteNav({ whatsappUrl }: { whatsappUrl: string }) {
   return (
     <nav className="fixed left-1/2 top-4 z-40 w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2">
       {/* pill bar */}
-      <div className="flex items-center justify-between gap-2 rounded-full border border-white/70 bg-white/90 px-3 py-2 shadow-[0_10px_30px_rgba(17,35,22,0.18)] backdrop-blur sm:px-6 sm:py-2.5">
+      <div className="flex items-center justify-between gap-2 rounded-full border border-white/70 bg-white/95 px-3 py-2 shadow-[0_10px_30px_rgba(17,35,22,0.18)] sm:px-6 sm:py-2.5">
         <a
           href="#top"
           className="flex items-center gap-2"

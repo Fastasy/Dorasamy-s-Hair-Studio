@@ -168,7 +168,7 @@ function GalleryTile({ label, file }: { label: string; file: string }) {
 
 export default function Home() {
   return (
-    <main className="cloud-bg relative min-h-screen overflow-hidden px-4 pb-16 pt-28 font-body sm:pt-32">
+    <main className="cloud-bg relative min-h-screen overflow-x-clip px-4 pb-16 pt-28 font-body sm:pt-32">
       {/* soft cloud puffs */}
       <div className="cloud-puff left-[-90px] top-[6%] h-64 w-80" />
       <div className="cloud-puff right-[-60px] top-[18%] h-48 w-72" />
@@ -193,8 +193,8 @@ export default function Home() {
       >
         {/* ---------- HERO ---------- */}
         <header className="hero-band relative overflow-hidden px-6 pb-12 pt-12 text-center sm:px-12">
-          <Daisy className="absolute left-1 top-1 h-16 w-16 rotate-[-15deg] floaty-slow [filter:drop-shadow(0_8px_10px_rgba(17,35,22,0.2))]" />
-          <BlackEyedSusan className="absolute right-1 top-1 h-16 w-16 rotate-12 floaty [filter:drop-shadow(0_8px_10px_rgba(17,35,22,0.2))]" />
+          <Daisy className="absolute left-1 top-1 h-16 w-16 rotate-[-15deg] [filter:drop-shadow(0_8px_10px_rgba(17,35,22,0.2))]" />
+          <BlackEyedSusan className="absolute right-1 top-1 h-16 w-16 rotate-12 [filter:drop-shadow(0_8px_10px_rgba(17,35,22,0.2))]" />
 
           <div className="relative z-10">
             <p className="hand-pop text-3xl leading-none sm:text-4xl">

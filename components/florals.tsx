@@ -188,16 +188,16 @@ export function FlowerCluster({
         <LeafSprig size={size * 0.72} className="translate-y-4" />
       </div>
       <div className="absolute left-0 top-0">
-        <Daisy size={size * 0.55} className="floaty [filter:drop-shadow(0_10px_12px_rgba(17,35,22,0.25))]" />
+        <Daisy size={size * 0.55} className="[filter:drop-shadow(0_10px_12px_rgba(17,35,22,0.25))]" />
       </div>
       <div className="absolute bottom-0 right-0">
         <BlackEyedSusan
           size={size * 0.62}
-          className="floaty-slow [filter:drop-shadow(0_10px_12px_rgba(17,35,22,0.25))]"
+          className="[filter:drop-shadow(0_10px_12px_rgba(17,35,22,0.25))]"
         />
       </div>
       <div className="absolute right-0 top-2">
-        <Daisy size={size * 0.4} className="floaty-slow [filter:drop-shadow(0_8px_10px_rgba(17,35,22,0.2))]" />
+        <Daisy size={size * 0.4} className="[filter:drop-shadow(0_8px_10px_rgba(17,35,22,0.2))]" />
       </div>
     </div>
   );
