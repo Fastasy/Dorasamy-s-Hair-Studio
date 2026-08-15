@@ -535,7 +535,16 @@ export default function Home() {
             © 2026 Dorasamy&apos;s Hair Studio by Taahira
           </p>
           <p className="mt-1 text-xs text-forest/40">
-            Website concept by Allegro Digital · Gqeberha
+            Website by{" "}
+            <a
+              href="https://www.allegrodigital.co.za"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-forest/60 transition hover:text-forest"
+            >
+              Allegro Digital
+            </a>{" "}
+            · Gqeberha
           </p>
         </footer>
       </section>
