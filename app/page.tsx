@@ -537,12 +537,12 @@ export default function Home() {
           <p className="mt-1 text-xs text-forest/40">
             Website by{" "}
             <a
-              href="https://www.allegrodigital.co.za"
+              href="https://www.loadlinestudio.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-forest/60 transition hover:text-forest"
             >
-              Allegro Digital
+              Loadline Studio
             </a>{" "}
             · Gqeberha
           </p>
